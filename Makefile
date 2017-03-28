@@ -29,4 +29,7 @@ PLIST_FILES=		bin/unbound_exporter
 pre-build:
 	@(cd ${GO_WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} get github.com/prometheus/client_golang/prometheus )
 
+do-install:
+	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/unbound_exporter ${STAGEDIR}${PREFIX}/bin
+
 .include <bsd.port.mk>
