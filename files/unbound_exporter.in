@@ -47,8 +47,6 @@ load_rc_config $name
 pidfile=/var/run/unbound_exporter.pid
 command=/usr/sbin/daemon
 procname="%%PREFIX%%/bin/unbound_exporter"
-sig_reload=HUP
-extra_commands=reload
 command_args="-p ${pidfile} /usr/bin/env ${procname} \
 				-unbound.ca ${unbound_exporter_ca} \
 				-unbound.cert ${unbound_exporter_cert} \
