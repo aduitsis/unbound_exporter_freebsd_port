@@ -11,6 +11,8 @@ COMMENT=		Prometheus metrics exporter for the Unbound DNS resolver
 
 LICENSE=		APACHE20
 
+BUILD_DEPENDS=		git:devel/git
+
 USES=			go
 GH_ACCOUNT=		kumina
 USE_GITHUB=		yes
